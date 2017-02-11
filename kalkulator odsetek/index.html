@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+</head>
+<body>
+    <form action="" name="formularz" id="formularz">
+    
+    <label for="numer">Wpłata w PLN
+    <input type="number"  value="0" min="0" name="numer" id="numer" ></label><br/>
+    
+    <select name="wybor" id="wybor">
+    <option value="12">Miesięcznie</option>
+    <option value="4">Kwartalnie</option>
+    <option value="1">Rocznie</option>
+    </select>
+    
+    <label for="iloscLat">Ilość lat
+    <input type="number"  value="1" min="1" name="iloscLat" id="iloscLat" ></label><br/>
+    
+    <label for="oprocentowanie">Oprocentowanie
+    <input type="number"  value="0" min="0" name="oprocentowanie" id="oprocentowanie" ></label><br/>
+    
+    
+    <label for="belka">Uwzględnij podatek Belki 19%<input type="checkbox"  id="belka" value="true" checked></label><br/>
+    
+    
+    <input type="button" id="licz" value="oblicz">
+    
+    <p id="wynik"></p>
+    
+    
+    
+    
+    
+   
+    
+    
+    <!--skrypt jquery-->
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <!--skrypt custom-->
+    <script src="js/script.js"></script>
+    </form>
+    
+</body>
+</html>
