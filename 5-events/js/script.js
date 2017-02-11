@@ -1,21 +1,24 @@
 jQuery(document).ready(function(){
-  'use strict'  
+  'use strict'      
+
+    //pojedyncze zdarzenie na paragrafie
+    $('p').click(function(){
+       $(this).css({"color": "orange", "background-color": "blue"}); 
+    });
     
-    //wybieranie elementu z kolekcji za pomoca metody eq()
-    $('body').find('p').eq(1).css({'color': 'green'});
     
-    //petla each dodajaca do paragrafow klase z kolejnym numerem
-    $('p').each(function(index){
-       $(this).addClass('paragraf-' + index); 
-        console.log(jQuery(this));
+    //grupa zdarzen na naglowku
+    $('h1').on({
+       'click': function () {
+           $(this).css("color", "orange");
+       },
+        'mouseleave' : function () {
+            $(this).css("color","inherit");
+        }
         
     });
     
     
-    //pojedyncze zdarzenie na paragrafie
-    $('p').click(function(){
-       $(this).css("color", "orange"); 
-    });
   
 });
 
