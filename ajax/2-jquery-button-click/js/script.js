@@ -2,19 +2,26 @@
 $(document).ready(function(){
    
     $('#pobierz-dane').click(function(){
+        
+        //pierwszy sposob $.getJSON
+        $.getJSON('http://echo.jsontest.com/userId/108/userName/Akademia108/userURL/akademia108.pl',function (dataJSON){
+            //wyswietli w konsoli
+            console.log(dataJSON);
+        });
+        
        
-         // drugi sposob $.ajax
+        /* // drugi sposob $.ajax
         $.ajax({
             url: 
             "http://echo.jsontest.com/userId/108/userName/Akademia108/userURL/akademia108.pl",
             dataType: 'json',
             success: function (resultJSON) {
 
-                /*
-                !!! Nie parsujemy do postaci obiektu JSON, bo od razu 
-                taki obiekt dostajemy w odpowiedzi !!!
-                var jsonObj = JSON.parse(resultJSON);
-                */
+                //
+                //!!! Nie parsujemy do postaci obiektu JSON, bo od razu 
+                //taki obiekt dostajemy w odpowiedzi !!!
+                //var jsonObj = JSON.parse(resultJSON);
+                //
 
                 console.log(resultJSON);
                 console.log("dziala");
@@ -38,7 +45,7 @@ $(document).ready(function(){
         });
 
         
-        
+        */
         
     
     
