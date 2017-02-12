@@ -78,8 +78,8 @@ function pobierzDane(event){
         },
         onSuccess:function(response){
             
-            console.log("polaczenie dziala i dane sa pobierane");
-/*            var jsonObj = JSON.parse(response);
+            //console.log("polaczenie dziala i dane sa pobierane");
+            var jsonObj = JSON.parse(response);
             console.log(jsonObj);
             
             var pUserId = document.createElement('p');
@@ -92,7 +92,7 @@ function pobierzDane(event){
             
             document.body.appendChild(pUserId);
             document.body.appendChild(pUserName);
-            document.body.appendChild(pUserURL);*/
+            document.body.appendChild(pUserURL);
             
             
             
