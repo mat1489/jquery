@@ -65,8 +65,39 @@ function ajax (ajaxOptions){
     
 }
 
-function pobierzDane(){
+function pobierzDane(event){
+    event.preventDefault();
+    //console.log("dziala");
     
+    ajax({
+        type: "GET",
+        url:
+        "http://echo.jsontest.com/userId/108/userName/Akademia108/userURL/akademia108.pl",
+        onError: function (msg){
+            console.log(msg);
+        },
+        onSuccess:function(response){
+            
+            console.log("polaczenie dziala i dane sa pobierane");
+/*            var jsonObj = JSON.parse(response);
+            console.log(jsonObj);
+            
+            var pUserId = document.createElement('p');
+            var pUserName = document.createElement('p');
+            var pUserURL = document.createElement('p');
+            
+            pUserId.innerHTML = "User ID: " + jsonObj.userId;
+            pUserName.innerHTML= "User Name: " + jsonObj.userName;
+            pUserURL.innerHTML = "User URL: http://" + jsonObj.userURL + "<br>--------";
+            
+            document.body.appendChild(pUserId);
+            document.body.appendChild(pUserName);
+            document.body.appendChild(pUserURL);*/
+            
+            
+            
+        }
+    })
     
     
 }
