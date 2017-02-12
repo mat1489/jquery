@@ -1,9 +1,36 @@
 'use strict';
-/*var wyslij = document.getElementById('button').addEventListener('click', function (e) {
-    e.preventDefault();
-    
 
-});*/
+   
+//      pkt9
+
+function obliczZysk(wplata,iloscLat,okresKapitalizacji,oprocentowanie){
+    
+    var podatek;
+
+         if(document.formularz.belka.checked){
+            //alert('yes');
+            podatek = true;}
+        else{
+            //alert('no');
+            podatek = false;}
+    
+          if(podatek==true){
+           var oprocentowanieOpodatkowane = oprocentowanie * (81 /100);
+            }else{
+               oprocentowanieOpodatkowane=oprocentowanie;
+            }
+
+    var podstawa =(1+(oprocentowanieOpodatkowane/okresKapitalizacji));
+    console.log("Podstawa: "+podstawa);
+    var potega=iloscLat*okresKapitalizacji;
+    console.log("potega: "+potega);
+    var kapital=wplata*Math.pow(podstawa, potega);
+    console.log("kapital: "+kapital);
+    
+    return kapital.toFixed(2);
+  
+}
+
 
 function oblicz (){
   
@@ -25,15 +52,10 @@ function oblicz (){
     oprocentowanie= oprocentowanie/100;    
     console.log("oprocentowanie: "+oprocentowanie);
     
-    //      pkt8
-    var test = document.getElementById('belka').value;
-    console.log(test);
-    var podatek = false;
-    
-    
-    
-    
-    
+    var kapitalFinalny=obliczZysk(wplata,iloscLat,okresKapitalizacji,oprocentowanie);
+//    console.log("Kapital finalny: "+kapitalFinalny);
+   
+    document.getElementById('wynik').innerHTML=kapitalFinalny;
  
     
   
