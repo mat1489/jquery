@@ -55,7 +55,7 @@ function oblicz (){
     var kapitalFinalny=obliczZysk(wplata,iloscLat,okresKapitalizacji,oprocentowanie);
 //    console.log("Kapital finalny: "+kapitalFinalny);
    
-    document.getElementById('wynik').innerHTML=kapitalFinalny;
+    document.getElementById('wynik').innerHTML=kapitalFinalny+" PLN";
  
     
   
